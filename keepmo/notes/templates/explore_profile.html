@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{profile.user.username}}{% endblock %}
+
+{% block body %}
+
+	<div class="container container-fluid">
+		<div class="card">
+			<h1 style="font-size: 4rem;" align="center">{{profile.user.username}}</h1>
+			<img style="width: 20%; height: auto;margin-top: 20px; margin-left: 20px;float: left;border-radius: 50px;" src="{{profile.photo.url}}" alt="{{profile.user.username}}">
+		      <br>
+		      <p align="justify">{{profile.user.profile.bio}}</p>
+		</div>
+<br>
+		<div class="card">
+			<h2>Notebooks from {{profile.user.username}}</h2>
+			{% for notebook in notebooks %}
+				
+		          <div onclick="location.href='{% url 'detailed_notebook' notebook.id %}'" class="notebook shadow" style="background-color: {{notebook.color}};cursor: pointer;padding: 10px;margin: 5px;">
+		            {{notebook.name}}
+		            <br>
+		            {{notebook.description}}
+		          </div>
+		        </a>
+			{% empty %}
+			<h1>Nothing to show.</h1>
+			{% endfor %}
+		</div>
+		
+	</div>
+
+
+{% endblock %}

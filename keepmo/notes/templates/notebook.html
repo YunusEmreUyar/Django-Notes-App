@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block title %}{{notebook.name}}{% endblock %}
+
+{% block style %}
+	<style type="text/css">
+		
+		h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+	</style>
+
+{% endblock %}
+
+
+
+
+
+{% block body %}
+	
+	<div class="container container-fluid">
+		<div class="card" style="background-color: {{notebook.color}};">
+			{% if user.profile == notebook.owner %}
+				<h1>{{notebook.name}} <small>by me</small></h1>
+			{% else %}
+				<h1>{{notebook.name}} <small>by <a href="{% url 'explore_profile' notebook.owner.id %}">{{notebook.owner.user.username}}</a></small></h1>
+			{% endif %}
+			<br>
+			<p>{{notebook.description}}</p>
+			{% if user == notebook.owner.user %}
+			<a href="{% url 'create_note' notebook.id %}">Create Note</a>
+			<a href="{% url 'edit_notebook' notebook.id %}">Edit</a>
+			{% endif %}
+			<hr>
+			<ul>
+				{% for note in notes %}
+					<li style="background-color: {{note.color}};" class="sticky">
+					    {% if user == note.notebook.owner.user %}
+						<a href="{% url 'edit_note' note.id %}">Edit</a>
+						{% endif %}
+					      <h2>{{note.title}}</h2>
+					      <p>{{note.content}}</p>
+					    
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+
+
+{% endblock %}

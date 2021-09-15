@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Homepage{% endblock %}
+
+
+{% block body %}
+
+	<div class="container">
+		<h1 align="left">
+			Let yourself<br><span class="text-danger"><b>grow</b></span> with community.
+		</h1>
+		<br>
+		<p style="font-size: 1.4rem;">Take notes whereever you are.<br>
+			Make them public so other <span class="text-warning">people</span> can see.
+		</p>
+		<br>
+		<div class="card">
+			<h3>Public Notebooks from community.</h3>
+			<br>
+			<div class="notebook shadow" style="background-color: #cfc;">
+				Notebook1 from user1 <br>
+				notebook1's description
+			</div>
+			
+			<div class="notebook shadow" style="background-color: #ffc;">
+				Notebook2 from user2<br>
+				notebook2's description
+			</div>
+
+			<div class="notebook shadow" style="background-color: #ccf;">
+				Notebook3 from user 3<br>
+				notebook3's description
+			</div>
+		</div>
+		
+		<hr>
+
+		<p style="font-size: 1.4rem;">Note, update and store them remote.</p>
+		<ul>	
+		<br>
+
+			<li class="sticky" style="background-color:#ccf;">
+				<h2>Note1</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				</p>
+			</li>
+			<li class="sticky" style="background-color:#ffcce5;">
+				<h2>Note2</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				</p>
+			</li>
+			<li class="sticky" style="background-color:#cfc;">
+				<h2>Note3</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+			</li>
+			<li class="sticky" style="background-color:#ffc;">
+				<h2>Note4</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				</p>
+			</li>
+		</ul>
+
+
+		<hr>
+		<br>
+		<p style="font-size: 1.4rem;">Give both notebooks and notes colors to organize them in your way.</p>
+		<div class="notebook shadow" style="background-color: #cfc;">
+			Notebook1 <br>
+			notebook1's description
+		</div>
+		
+		<div class="notebook shadow" style="background-color: #ffc;">
+			Notebook2 <br>
+			notebook2's description
+		</div>
+
+		<div class="notebook shadow" style="background-color: #ccf;">
+			Notebook3 <br>
+			notebook3's description
+		</div>
+		
+		<br><br><br>
+	</div>
+
+{% endblock %}
