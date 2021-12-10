@@ -9,7 +9,7 @@
 		<div class="card">
 			<h1>Public Notebooks</h1>
 			{% for notebook in notebooks %}
-	          <div onclick="location.href='{% url 'detailed_notebook' notebook.id %}';" class="notebook" style="background-color: {{notebook.color}};padding: 10px;margin: 5px;cursor: pointer;">
+	          <div onclick="location.href='{% url 'detailed_notebook' notebook.id %}';" class="notebook" style="background-color: {{notebook.color}};">
 	            {{notebook.name}}
 	            <br>
 	            {{notebook.description}}
